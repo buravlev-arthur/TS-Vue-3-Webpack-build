@@ -1,0 +1,26 @@
+{
+  "name": "dots-frontend-v2",
+  "version": "0.0.1",
+  "description": "New version of DOTS system (version 2) on Vue+Vuex stack",
+  "private": true,
+  "scripts": {
+    "test": "test",
+    "build": "webpack",
+    "serve": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.skrt.biz/bao/new-dots.git"
+  },
+  "keywords": [
+    "dots"
+  ],
+  "author": "Arthur Buravljov",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  }
+}
