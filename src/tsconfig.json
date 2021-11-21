@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "module": "esnext",
+      "target": "es5",
+      "jsx": "preserve",
+      "strict": true,
+      "moduleResolution": "node"
+    }
+}
