@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 const webpack = require('webpack');
 
 module.exports = {
@@ -15,13 +16,21 @@ module.exports = {
       rules: [
           {
               test: /\.s[ac]ss$/i,
-              use: ['style-loader', 'css-loader', 'sass-loader']
+              use: ['vue-style-loader', 'css-loader', 'sass-loader']
           },
 
           {
-              test: /\.ts$/i,
-              use: 'ts-loader',
+              test: /\.(ts|tsx)$/i,
+              loader: 'ts-loader',
+              options: {
+                  appendTsSuffixTo: [/\.vue$/]
+              },
               exclude: /node_modules/
+          },
+
+          {
+              test: /\.vue$/,
+              use: 'vue-loader'
           }
       ]  
     },
@@ -30,7 +39,7 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js', '.json'],
         alias: {
             //configure full build of Vue (runtime+compiler). See: https://github.com/vuejs/vue/tree/dev/dist#runtime--compiler-vs-runtime-only
-            'vue': 'vue/dist/vue.esm-bundler.js'
+            //'vue': 'vue/dist/vue.esm-bundler.js'
         }
     },
 
@@ -38,6 +47,8 @@ module.exports = {
         new HtmlWebpackPlugin({
           title: 'DOTS'
         }),
+
+        new VueLoaderPlugin(),
 
         //it's some settings for Vue (see: https://github.com/vuejs/vue-next/tree/master/packages/vue#bundler-build-feature-flags)
         new webpack.DefinePlugin({
@@ -50,5 +61,5 @@ module.exports = {
 
     devServer: {
         static: './dist',
-    },
+    }
 }

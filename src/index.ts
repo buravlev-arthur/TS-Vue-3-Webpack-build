@@ -1,6 +1,5 @@
 import * as Vue from 'vue';
-import App from './app/index';
-import './app/index.scss';
+import App from './app/index.vue';
 
 // Creating and mounting in DOM <div> with id: '#app'
 const app = document.createElement("div");
