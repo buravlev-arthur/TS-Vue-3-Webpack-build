@@ -1,17 +1,31 @@
 <template>
-    <p>{{counter}}</p>
+    <p>{{counter}} : {{count}} : {{name}}</p>
+    <name></name>
 </template>
 
 <script lang="ts">
-export default {
+import name from './component.vue';
+import { defineComponent } from 'vue';
+import { mapState } from 'vuex';
+
+export default defineComponent({
     name: "app",
 
     data() {
         return {
             counter: 54
         }
+    },
+
+    computed: {
+        ...mapState(['count']),
+        ...mapState('m_1', ['name'])
+    },
+
+    components: {
+        "name": name
     }
-}
+})
 </script>
 
 <style lang="scss">
