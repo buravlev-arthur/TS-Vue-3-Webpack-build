@@ -39,7 +39,7 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js', '.json'],
         alias: {
             //configure full build of Vue (runtime+compiler). See: https://github.com/vuejs/vue/tree/dev/dist#runtime--compiler-vs-runtime-only
-            //'vue': 'vue/dist/vue.esm-bundler.js'
+            'vue': 'vue/dist/vue.esm-bundler.js'
         }
     },
 

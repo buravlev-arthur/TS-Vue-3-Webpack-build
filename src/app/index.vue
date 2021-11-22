@@ -1,6 +1,13 @@
 <template>
+    <div id="nav">
+         <router-link to="/">Go to Home</router-link>
+         <router-link to="/name">Name-Page</router-link>
+    </div>
+    <div id="page_view">
+        <router-view></router-view>
+    </div>
     <p>{{counter}} : {{count}} : {{name}}</p>
-    <name></name>
+    <!--<name></name>-->
 </template>
 
 <script lang="ts">
