@@ -18,8 +18,12 @@
   "author": "Arthur Buravljov",
   "license": "ISC",
   "devDependencies": {
+    "@typescript-eslint/parser": "^5.4.0",
     "@vue/compiler-sfc": "^3.2.22",
+    "@vue/eslint-config-typescript": "^9.1.0",
     "css-loader": "^6.5.1",
+    "eslint": "^8.3.0",
+    "eslint-plugin-vue": "^8.1.1",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",

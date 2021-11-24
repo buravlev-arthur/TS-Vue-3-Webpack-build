@@ -1,22 +1,32 @@
 <template>
+  <div>
     <div id="nav">
-         <router-link to="/">Go to Home</router-link>
-         <router-link to="/name">Name-Page</router-link>
+      <router-link to="/">
+        Go to Home
+      </router-link>
+      <router-link to="/name">
+        Name-Page
+      </router-link>
     </div>
     <div id="page_view">
-        <router-view></router-view>
+      <router-view />
     </div>
-    <p>{{counter}} : {{count}} : {{name}}</p>
-    <!--<name></name>-->
+    <p>{{ counter }} : {{ count }} : {{ name }}</p>
+    <name-component />
+  </div>
 </template>
 
 <script lang="ts">
-import name from './component.vue';
+import NameComponent from './component.vue';
 import { defineComponent } from 'vue';
 import { mapState } from 'vuex';
 
 export default defineComponent({
-    name: "app",
+    name: "App",
+
+    components: {
+        "name-component": NameComponent
+    },
 
     data() {
         return {
@@ -27,10 +37,6 @@ export default defineComponent({
     computed: {
         ...mapState(['count']),
         ...mapState('m_1', ['name'])
-    },
-
-    components: {
-        "name": name
     }
 })
 </script>

@@ -1,12 +1,12 @@
 <template>
-    <p>{{name}}</p>
+  <p>{{ name }}</p> 
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name : "name",
+    name : "NameComponent",
     
     data() {
         return {
