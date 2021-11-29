@@ -13,39 +13,56 @@
     </div>
     <p>{{ counter }} : {{ count }} : {{ name }}</p>
     <name-component />
+    <img
+      width="200"
+      src="./assets/images/image.png"
+    >
+    <div id="lg" />
   </div>
 </template>
 
-<script lang="ts">
-import NameComponent from './component.vue';
-import { defineComponent } from 'vue';
-import { mapState } from 'vuex';
+<script>
+import NameComponent from './component.vue'
+import { mapState } from 'vuex'
 
-export default defineComponent({
-    name: "App",
+export default {
+  name: 'App',
 
-    components: {
-        "name-component": NameComponent
-    },
+  components: {
+    'name-component': NameComponent
+  },
 
-    data() {
-        return {
-            counter: 54
-        }
-    },
-
-    computed: {
-        ...mapState(['count']),
-        ...mapState('m_1', ['name'])
+  data () {
+    return {
+      counter: 54
     }
-})
+  },
+
+  computed: {
+    ...mapState(['count']),
+    ...mapState('m_1', ['name'])
+  }
+}
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family:'Roboto-Regular';
+  src: url('./assets/fonts/Roboto-Regular.ttf');
+}
+
 #app {
     border:1px solid rgb(0, 126, 17);
     width:800px;
     height:300px;
     margin:100px auto;
+    font-family:Roboto-Regular;
+}
+
+#lg {
+  width:200px;
+  height:200px;
+  background: url('./assets/images/img.jpg');
+  background-size: contain;
 }
 </style>

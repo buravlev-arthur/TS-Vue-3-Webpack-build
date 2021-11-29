@@ -1,19 +1,18 @@
 <template>
-  <p>{{ name }}</p> 
+  <p>{{ name }}</p>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script>
 
-export default defineComponent({
-    name : "NameComponent",
-    
-    data() {
-        return {
-            name : 'Leon'
-        }
+export default {
+  name: 'NameComponent',
+
+  data () {
+    return {
+      name: 'Leon'
     }
-})
+  }
+}
 </script>
 
 <style lang="scss" scoped>
