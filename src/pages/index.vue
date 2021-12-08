@@ -1,11 +1,7 @@
 <template>
   <div id="nav">
-    <router-link to="/">
-      Home-Page
-    </router-link>
-    <router-link to="/test">
-      Test-Page
-    </router-link>
+    <router-link to="/"> Home-Page </router-link>
+    <router-link to="/test"> Test-Page </router-link>
   </div>
 </template>
 
@@ -13,8 +9,8 @@
 export default {
   name: 'RoutingComponent',
 
-  data () {
-    return {}
-  }
-}
+  data() {
+    return {};
+  },
+};
 </script>

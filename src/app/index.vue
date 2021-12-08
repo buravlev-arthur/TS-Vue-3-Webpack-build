@@ -1,37 +1,37 @@
 <template>
-  <Routing />
+  <div>
+    <Routing />
 
-  <button class="btn">
-    Текст кнопки
-  </button>
+    <button class="btn">Текст кнопки</button>
 
-  <div id="page_view">
-    <router-view />
+    <div id="page_view">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
 // import { mapState } from 'vuex'
-import routingComponent from '../pages/index.vue'
+import routingComponent from '../pages/index.vue';
 
 export default {
   name: 'App',
 
   components: {
-    Routing: routingComponent
+    Routing: routingComponent,
   },
 
-  data () {
+  data() {
     return {
-      counter: 54
-    }
-  }
+      counter: 54,
+    };
+  },
 
   /* computed: {
     ...mapState(['count']),
     ...mapState('m_1', ['name'])
   } */
-}
+};
 </script>
 
 <style lang="scss">
@@ -39,15 +39,15 @@ export default {
 @import "../shared/ui/index.scss";
 
 @font-face {
-  font-family:'Roboto-Regular';
-  src: url('./assets/fonts/Roboto-Regular.ttf');
+  font-family: "Roboto-Regular";
+  src: url("./assets/fonts/Roboto-Regular.ttf");
 }
 
 #app {
-    border:1px solid rgb(0, 126, 17);
-    width:800px;
-    height:300px;
-    margin:100px auto;
-    font-family:Roboto-Regular;
+  border: 1px solid rgb(0, 126, 17);
+  width: 800px;
+  height: 300px;
+  margin: 100px auto;
+  font-family: Roboto-Regular;
 }
 </style>
