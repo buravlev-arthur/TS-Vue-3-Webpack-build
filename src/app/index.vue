@@ -1,51 +1,43 @@
 <template>
-  <div>
-    <div id="nav">
-      <router-link to="/">
-        Go to Home
-      </router-link>
-      <router-link to="/name">
-        Name-Page
-      </router-link>
-    </div>
-    <div id="page_view">
-      <router-view />
-    </div>
-    <p>{{ counter }} : {{ count }} : {{ name }}</p>
-    <name-component />
-    <img
-      width="200"
-      src="./assets/images/image.png"
-    >
-    <div id="lg" />
+  <Routing />
+
+  <button class="btn">
+    Текст кнопки
+  </button>
+
+  <div id="page_view">
+    <router-view />
   </div>
 </template>
 
 <script>
-import NameComponent from './component.vue'
-import { mapState } from 'vuex'
+// import { mapState } from 'vuex'
+import routingComponent from '../pages/index.vue'
 
 export default {
   name: 'App',
 
   components: {
-    'name-component': NameComponent
+    Routing: routingComponent
   },
 
   data () {
     return {
       counter: 54
     }
-  },
+  }
 
-  computed: {
+  /* computed: {
     ...mapState(['count']),
     ...mapState('m_1', ['name'])
-  }
+  } */
 }
 </script>
 
 <style lang="scss">
+@import "./styles/index.scss";
+@import "../shared/ui/index.scss";
+
 @font-face {
   font-family:'Roboto-Regular';
   src: url('./assets/fonts/Roboto-Regular.ttf');
@@ -57,12 +49,5 @@ export default {
     height:300px;
     margin:100px auto;
     font-family:Roboto-Regular;
-}
-
-#lg {
-  width:200px;
-  height:200px;
-  background: url('./assets/images/img.jpg');
-  background-size: contain;
 }
 </style>
