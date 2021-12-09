@@ -4,6 +4,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = (env) => ({
@@ -82,6 +83,10 @@ module.exports = (env) => ({
       emitWarning: false,
       failOnError: true,
       failOnWarning: false,
+    }),
+
+    new StyleLintPlugin({
+      files: [path.resolve(__dirname, 'src/**/*.{scss,vue}')],
     }),
 
     new CopyWebpackPlugin({

@@ -35,19 +35,19 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./styles/index.scss";
-@import "../shared/ui/index.scss";
+@import "./styles/index";
+@import "../shared/ui/index";
 
 @font-face {
-  font-family: "Roboto-Regular";
+  font-family: Roboto-Regular;
   src: url("./assets/fonts/Roboto-Regular.ttf");
 }
 
 #app {
-  border: 1px solid rgb(0, 126, 17);
+  border: 1px solid #007e11;
   width: 800px;
   height: 300px;
   margin: 100px auto;
-  font-family: Roboto-Regular;
+  font-family: Roboto-Regular, sans-serif;
 }
 </style>
