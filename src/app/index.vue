@@ -3,7 +3,7 @@
     <Routing />
 
     <button class="btn">Текст кнопки</button>
-
+    <i className="icon bi-envelope"></i>
     <div id="page_view">
       <router-view />
     </div>
