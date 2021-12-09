@@ -65,7 +65,7 @@ module.exports = (env) => ({
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'),
+      template: path.resolve(__dirname, 'public/index.html'),
     }),
 
     new VueLoaderPlugin(),
@@ -91,7 +91,7 @@ module.exports = (env) => ({
 
     new CopyWebpackPlugin({
       patterns: [
-        { from: path.resolve(__dirname, 'src/favicon.png'), to: path.resolve(__dirname, 'dist') },
+        { from: path.resolve(__dirname, 'public/favicon.png'), to: path.resolve(__dirname, 'dist') },
       ],
     }),
 
