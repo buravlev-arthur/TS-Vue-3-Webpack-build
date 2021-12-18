@@ -1,9 +1,9 @@
 <template>
-  <div>Test Page</div>
+  <div>Auth page</div>
 </template>
 
 <script>
 export default {
-  name: 'TestPage',
+  name: 'AuthPage',
 };
 </script>

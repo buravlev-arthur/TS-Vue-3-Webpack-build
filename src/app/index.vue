@@ -1,9 +1,11 @@
 <template>
   <div>
-    <Routing />
-
-    <button class="btn">Текст кнопки</button>
-    <i className="icon bi-envelope"></i>
+    <div v-if="auth">
+      <Routing />
+      <p>{{ 'auth: ' + auth }}</p>
+      <button class="btn">Текст кнопки</button>
+      <i className="icon bi-envelope"></i>
+    </div>
     <div id="page_view">
       <router-view />
     </div>
@@ -13,6 +15,7 @@
 <script>
 // import { mapState } from 'vuex'
 import routingComponent from '../pages/index.vue';
+import auth from '../processes/auth';
 
 export default {
   name: 'App',
@@ -24,7 +27,18 @@ export default {
   data() {
     return {
       counter: 54,
+      auth: false,
     };
+  },
+
+  mounted() {
+    this.auth = auth();
+
+    if (this.auth === false) {
+      this.$router.push('auth');
+    } else {
+      this.$router.push('/');
+    }
   },
 
   /* computed: {

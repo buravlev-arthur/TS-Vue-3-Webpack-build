@@ -1,4 +1,4 @@
-import { apiInstance } from './connect';
+import apiInstance from './connect';
 
 const URL_PATH = '/todos';
 

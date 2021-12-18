@@ -17,5 +17,13 @@ module.exports = {
   plugins: ['vue', '@typescript-eslint'],
   rules: {
     'linebreak-style': 0,
+    'import/extensions': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 };
