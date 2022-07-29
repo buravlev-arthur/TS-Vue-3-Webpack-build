@@ -1,1 +1,11 @@
-@import "buttons";
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+.stack-icons {
+  width: 50px;
+}

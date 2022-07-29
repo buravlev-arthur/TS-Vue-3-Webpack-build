@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
@@ -33,6 +34,16 @@ module.exports = (env) => ({
         use: [
           env.production ? MiniCssExtractPlugin.loader : 'vue-style-loader',
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugings: () => [
+                  require('autoprefixer'),
+                ],
+              },
+            },
+          },
           'sass-loader',
         ],
       },
@@ -69,7 +80,7 @@ module.exports = (env) => ({
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json'],
     alias: {
-      // configure full build of Vue (runtime+compiler). See: https://github.com/vuejs/vue/tree/dev/dist#runtime--compiler-vs-runtime-only
+      // configuring full build of Vue (runtime+compiler). See: https://github.com/vuejs/vue/tree/dev/dist#runtime--compiler-vs-runtime-only
       vue: 'vue/dist/vue.esm-bundler.js',
     },
   },
@@ -81,7 +92,7 @@ module.exports = (env) => ({
 
     new VueLoaderPlugin(),
 
-    // it's some settings for Vue (see: https://github.com/vuejs/vue-next/tree/master/packages/vue#bundler-build-feature-flags)
+    // it's a few settings for Vue (see: https://github.com/vuejs/vue-next/tree/master/packages/vue#bundler-build-feature-flags)
     new webpack.DefinePlugin({
       __VUE_OPTIONS_API__: true,
       __VUE_PROD_DEVTOOLS__: true,

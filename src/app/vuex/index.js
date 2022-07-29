@@ -3,15 +3,9 @@ import { createStore } from 'vuex';
 import Module1 from './module_1';
 
 export default createStore({
-  state: () => ({
-    count: 0,
-  }),
+  state: () => ({}),
 
-  mutations: {
-    increment(state) {
-      state.count += 1;
-    },
-  },
+  mutations: {},
 
   modules: {
     m_1: Module1,
