@@ -6,14 +6,22 @@
   "scripts": {
     "test": "test",
     "build": "webpack --mode=production --env production",
-    "serve": "webpack-dev-server --hot"
+    "serve": "webpack-dev-server --hot",
+    "lint": "npx eslint --ext .vue,.ts,.js src/"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/buravlev-arthur/TS-Vue-3-Webpack-build"
   },
   "keywords": [
-    "dots"
+    "webpack",
+    "vue 3",
+    "TypeScript",
+    "Bootstrap 5",
+    "Sass",
+    "ESlint",
+    "Stylelint",
+    "Babel"
   ],
   "author": "Arthur Buravljov",
   "license": "UNLICENSED",

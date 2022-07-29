@@ -27,7 +27,7 @@
 import { mapState } from 'vuex';
 
 export default {
-  name: 'MainPage',
+  name: 'TestsPage',
 
   computed: {
     ...mapState('m_1', ['state']),

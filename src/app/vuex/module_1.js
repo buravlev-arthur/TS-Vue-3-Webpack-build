@@ -3,6 +3,6 @@ export default {
   namespaced: true,
 
   state: () => ({
-    state: 'This text stored in the Vuex store',
+    state: 'This text is stored in the Vuex store',
   }),
 };

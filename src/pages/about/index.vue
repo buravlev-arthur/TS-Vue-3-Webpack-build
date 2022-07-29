@@ -64,10 +64,10 @@
 
 <script>
 export default {
-  name: 'AuthPage',
+  name: 'AboutPage',
   data() {
     return {
-      about: 'The "TypeScript + Vue 3 + Webpack" build prepared for production purposes. The build also contains configured libraries: Vuex, Vue-router, Bootstrap 5, Bootstrap-icons. ESLint and Stylelint checking is provided as well. Implemented Babel and CSS compression by building the project.',
+      about: 'The "TypeScript + Vue 3 + Webpack" build prepared for production purposes. The build also contains configured libraries: Vuex, Vue-router, Bootstrap 5, Bootstrap-icons. ESLint and Stylelint linting is provided as well. Implemented Babel compilation and CSS compression by building the project.',
     };
   },
 };
