@@ -6,7 +6,12 @@ The "TypeScript + Vue 3 + Webpack" build prepared for production purposes. The b
 
 ## Usage
 ```
-npm install /* Install the project */
-npm run serve /* Start runtime dev-server */
-npm run build /* Build the project */
+/* Install the project */
+npm install
+
+/* Start runtime dev-server */
+npm run serve
+
+/* Build the project */
+npm run build
 ```
